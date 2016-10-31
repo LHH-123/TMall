@@ -40,7 +40,7 @@
 #header_main ul{}
 #header_main li{ font-size:1.2em; display:inline-block;  padding-left:10px; padding-right:10px; }
 .tao{border-right:1px solid #999;}
-.red-tao a{color:red !important;}
+.red-tao a{color:#c40001 !important;}
 
 /*nav*/
 #nav{height:36px; line-height:36px;font-size:1.3em;color:white;background-color:#dd2726; font-family:"微软雅黑"; position:relative;}
