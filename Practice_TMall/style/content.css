@@ -10,7 +10,7 @@
 .top_nav_left {}
 .top_nav_left em{ font-style:normal; }
 #plese{ padding-left:20px; padding-right:20px;}
-.top_nav_left a,.top_nav_right a,#header_main li a{color:#999;}
+.top_nav_left a,.top_nav_right a,.header_main li a{color:#999;}
 
 .top_nav_right ul{}
 .top_nav_right li{ float:left;margin:auto 10px;}
@@ -24,21 +24,21 @@
 
 
 /*天猫logo和输入框*/
-#header{}
-#header_main{width:1230px;height:114px;margin:18px auto 0px auto; position:relative; }
-#header_log{width:200px; height:114px; position:absolute; left:50px; top:0px;color:#dd2726;font-family:"幼圆";}
-#header_log  h1{ font-size:4em;}
-#header_log h1 a{ color:#dd2726; font-weight:bold;}
-#header_log  p{font-size:1.8em;}
+.header{}
+.header_main{width:1230px;height:114px;margin:18px auto 0px auto; position:relative; }
+.header_log{width:200px; height:114px; position:absolute; left:50px; top:0px;color:#dd2726;font-family:"幼圆";}
+.header_log  h1{ font-size:4em;}
+.header_log h1 a{ color:#dd2726; font-weight:bold;}
+.header_log  p{font-size:1.8em;}
 
-#search_box{ width:622px; height:36px;  margin:0px auto; position:absolute; top:20px; left:268px;border:2px solid #c40001;}
+.search_box{ width:622px; height:36px;  margin:0px auto; position:absolute; top:20px; left:268px;border:2px solid #c40001;}
 #search_text{width:618px;height:36px; background-color:transparent;position:absolute;top:0px;left:0px; text-indent:8px;}
 #btn{ height:36px; width:132px;  position:absolute;top:0px;right:0px; background:#c40001;color:white; font-size:2em; font-weight:bold; }
-#search_text label{}
+.search_text label{}
 
 .link_box{ width:622px; position:absolute;top:66px;left:258px;}
-#header_main ul{}
-#header_main li{ font-size:1.2em; display:inline-block;  padding-left:10px; padding-right:10px; }
+.header_main ul{}
+.header_main li{ font-size:1.2em; display:inline-block;  padding-left:10px; padding-right:10px; }
 .tao{border-right:1px solid #999;}
 .red-tao a{color:#c40001 !important;}
 
@@ -132,8 +132,8 @@ h6{ padding-bottom:6px; padding-top:6px; margin-bottom:18px;}
 
 
 
-.brand-flip,.brand-date,.wocao{ width:120px; height:108px; position:absolute;top:0;left:0;background-color:#fff !important;text-align:center; }
-.wocao{background-color:#F5F5F5 !important;}
+.brand-flip,.brand-date,.theBlankBack{ width:120px; height:108px; position:absolute;top:0;left:0;background-color:#fff !important;text-align:center; }
+.theBlankBack{background-color:#F5F5F5 !important;}
 .brand_img{position:absolute;top:50%;left:50%; margin:-25px auto auto -50px;}
 
 

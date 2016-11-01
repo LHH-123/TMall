@@ -1,50 +1,6 @@
 // JavaScript Document
 var clear;
 
-$(document).ready(function() {
-    $("#toBra").bind("click",function()
-	{	
-		var ele=$('.brand-flip');
-		ele.each(function()		 
-		{   
-		    var newCon=$(this).siblings('.brand-date');
-			var oldCon=newCon.siblings('.brand-flip');
-			var wori=$(this).siblings('.wocao');
-			var index=$(this);
-		    if($(this).data('flipped'))
-		    {				    
-				$(this).flip
-			    ({
-				direction:'lr',
-                speed: 350,
-				onBefore: function(){
-					//oldCon.show();
-					newCon.css("z-index","0");
-					oldCon.css("z-index","200");
-
-				}
-			    });
-				$(this).data('flipped',false);
-		    }
-		    else//当前为brand-flip
-		    {   
-				$(this).flip
-				({
-					direction:'lr',
-                	speed: 350,
-					onEnd: function(){
-						//newCon.show();
-						oldCon.css("z-index","0");
-						wori.css("z-index","100");
-					    newCon.css("z-index","200");
-					}
-				});
-				$(this).data('flipped',true);
-			}        
-        });		
-	});
-
-});
 
 window.onload=function(){
 	
@@ -54,6 +10,7 @@ window.onload=function(){
 	mv.app.toBrand2();
 	mv.app.toCat();
 	mv.app.navDetile();
+	mv.app.toFlip();
 	};
 
 var mv={};
@@ -237,3 +194,51 @@ mv.app.navDetile = function() {
 		mv.ui.displayNone(navD);
 		},false);
 	};
+	
+/*点击按钮，翻转品牌*/
+mv.app.toFlip=function() 
+{
+    $("#toBra").bind("click",function()
+	{	
+		var ele=$('.brand-flip');
+		ele.each(function()		 
+		{   
+		    var newCon=$(this).siblings('.brand-date');
+			var oldCon=newCon.siblings('.brand-flip');
+			var theBack=$(this).siblings('.theBlankBack');
+			
+		    if($(this).data('flipped'))
+		    {				    
+				$(this).flip
+			    ({
+				direction:'lr',
+                speed: 350,
+				onBefore: function(){
+					//oldCon.show();
+					newCon.css("z-index","0");
+					oldCon.css("z-index","200");
+
+				}
+			    });
+				$(this).data('flipped',false);
+		    }
+		    else//当前为brand-flip
+		    {   
+				$(this).flip
+				({
+					direction:'lr',
+                	speed: 350,
+					onBefore: function(){
+					theBack.css("z-index","100");
+				  },
+					onEnd: function(){
+						//newCon.show();
+						oldCon.css("z-index","0");
+					    newCon.css("z-index","200");
+					}
+				});
+				$(this).data('flipped',true);
+			}        
+        });		
+	});
+}
