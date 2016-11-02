@@ -2,7 +2,7 @@
 /* CSS Document */
 .left{float:left;}
 .right{float:right;}
-
+body{min-width:1230px;}
 
 /*头部导航*/
 .top{ background:#f2f2f2; margin-top:1px; margin-bottom:6px; border-bottom:1px solid #e4e4e4;}
